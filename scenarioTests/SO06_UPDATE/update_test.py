@@ -8,6 +8,7 @@ from constants.globalConstants import *
 class Test_Scenario06(functions):
 
 
+#TC1
     def test_contact_update(self):
         self.precondition_application()
         self.closePopup()
@@ -34,6 +35,7 @@ class Test_Scenario06(functions):
         save_media = self.waitForElementVisible(SAVE_MEDIA_XPATH)
         assert save_media.text == "https://tr.linkedin.com/"
 
+#TC2
     def test_information_update(self):
         self.precondition_application()
         self.closePopup()
@@ -54,6 +56,7 @@ class Test_Scenario06(functions):
         update_cv = self.waitForElementVisible(UPDATE_CV_POPUP_XPATH)
         assert update_cv.text == "Özgeçmişin değiştirildi."
 
+#TC3
     def test_skill(self):
         self.precondition_application()
         self.closePopup()
@@ -75,6 +78,4 @@ class Test_Scenario06(functions):
         add_skill_click.click()
         talent_okey = self.waitForElementVisible(TALENT_OKEY_XPATH)
         talent_okey.click()
-        time.sleep(1)
         self.take_screenshot("pictures/skill.png")
-        

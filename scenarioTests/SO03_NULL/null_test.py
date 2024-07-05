@@ -7,6 +7,7 @@ from constants.globalConstants import *
 @pytest.mark.usefixtures("setup")
 class Test_Scenario03(functions):
 
+#TC1
     def test_invalid_category(self):
         self.precondition_search_job()
         remote = self.waitForElementVisible(REMOTE_XPATH)
@@ -20,6 +21,7 @@ class Test_Scenario03(functions):
         imformation_message = self.waitForElementVisible(INFORMATION_MESSAGE_XPATH)
         assert imformation_message.text == "Aramana uygun bir sonuç bulunamadı. 😔"
 
+#TC2
     def test_invalid_character(self):
         self.precondition_search_job()
         keyword = self.waitForElementVisible(KEYWORD_XPATH)
@@ -28,22 +30,8 @@ class Test_Scenario03(functions):
         imformation_message = self.waitForElementVisible(INFORMATION_MESSAGE_XPATH)
         assert imformation_message.text == "Aramana uygun bir sonuç bulunamadı. 😔"
 
+#TC3
     def test_empty_search(self):
         self.precondition_search_job()
         self.jobClick()
         self.take_screenshot("pictures/empty_search.png")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        

@@ -83,7 +83,7 @@ DETAILED_INFORMATION_BUTTON_XPATH = (By.XPATH,"//*[@id='__layout']/div/div[2]/ma
 COMPANY_TEXT_XPATH = (By.XPATH,"/html/body/div[4]/div[1]/div/div/div/p/text()[2]")
 COMPANY_TEXT_CLOSE_XPATH = (By.XPATH,"//body/div[3]/div[@role='dialog']//div[@class='modal-content']//button[@type='button']")
 COMPANY_PAGE_XPATH = (By.XPATH,"//*[@id='__layout']/div/div[2]/main/section/div/div/div[2]/div[1]/div/div[2]/a")
-
+COMPANY_NAME_XPATH = (By.XPATH,"/html/body/div[1]/div/div/div[2]/section/section/div[3]/div[1]/div/div[1]/div/div[2]/h1")
 
 #SO06_UPDATE
 #TC1

@@ -7,6 +7,7 @@ from constants.globalConstants import *
 @pytest.mark.usefixtures("setup")
 class Test_Scenario01(functions):
     
+#TC1
     def test_category_selections(self):
         self.precondition_search_job()
         at_work = self.waitForElementVisible(AT_WORK_XPATH)
@@ -19,6 +20,7 @@ class Test_Scenario01(functions):
         self.driver.execute_script("window.scrollTo(0,500)")
         self.take_screenshot("pictures/category_selections.png")
 
+#TC2
     def test_location_list(self):
         self.precondition_search_job()
         choose_city = self.waitForElementVisible(CHOOSE_CITY_XPATH)
@@ -37,7 +39,7 @@ class Test_Scenario01(functions):
         apply = self.waitForElementVisible(APPLY_XPATH)
         apply.click()
         self.take_screenshot("pictures/location_list.png")
-
+#TC3
     def test_clean_filters(self):
         self.precondition_search_job()
         at_work = self.waitForElementVisible(AT_WORK_XPATH)
@@ -53,4 +55,3 @@ class Test_Scenario01(functions):
         apply.click()
         clean_filters = self.waitForElementVisible(CLEAN_FILTERS_XPATH)
         clean_filters.click()
-        

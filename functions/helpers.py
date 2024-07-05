@@ -26,16 +26,18 @@ class functions:
     def newTab(self):
         window_after = self.driver.window_handles[-1]
         self.driver.switch_to.window(window_after)
- 
-    def precondition_search_job(self):
-        search_job = self.waitForElementVisible(SEARCH_JOB_XPATH)
-        search_job.click()
+
 
     def jobClick(self):
         job_search = self.waitForElementVisible(JOB_SEARCH_XPATH)
         job_search.click()
 
+# SO1 - SO2 -SO6
+    def precondition_search_job(self):
+        search_job = self.waitForElementVisible(SEARCH_JOB_XPATH)
+        search_job.click()
 
+# SO3
     def precondition_application(self):
         login = self.waitForElementVisible(LOGIN_XPATH)
         login.click()
@@ -59,7 +61,7 @@ class functions:
         job_search.click()
         time.sleep(1)
    
-
+#SO5
     def precondition_my_applications(self):
         login = self.waitForElementVisible(LOGIN_XPATH)
         login.click()
@@ -84,4 +86,3 @@ class functions:
         applications = self.waitForElementVisible(APPLICATIONS_XPATH)
         applications.click()
         time.sleep(1)
-

@@ -7,6 +7,7 @@ from constants.globalConstants import *
 @pytest.mark.usefixtures("setup")
 class Test_Scenario05(functions):
 
+#TC1
     def test_history(self):
         self.precondition_my_applications()
         application_details = self.waitForElementVisible(APPLICATION_DETAILS_XPATH)
@@ -15,6 +16,7 @@ class Test_Scenario05(functions):
         application_date = self.waitForElementVisible(APPLICATION_DATE_XPATH)
         assert application_date.text == "28.06.2024"
 
+#TC2
     def test_detail (self):
         self.precondition_my_applications()
         application_details = self.waitForElementVisible(APPLICATION_DETAILS_XPATH)
@@ -30,7 +32,8 @@ class Test_Scenario05(functions):
         self.waitForElementVisible(SEE_MORE_XPATH).click()
         general_qualifications = self.waitForElementVisible(GENERAL_QUALIFICATIONS_XPATH)
         assert general_qualifications.text == "General Qualifications:"
-
+        
+#TC3
     def test_company_details(self):
         self.precondition_my_applications()
         application_details = self.waitForElementVisible(APPLICATION_DETAILS_XPATH)
@@ -50,3 +53,6 @@ class Test_Scenario05(functions):
         company_page = self.waitForElementVisible(COMPANY_PAGE_XPATH)
         company_page.click()
         self.newTab()
+        company_name = self.waitForElementVisible(COMPANY_NAME_XPATH)
+        assert company_name.text == "Rams Türkiye"
+        
